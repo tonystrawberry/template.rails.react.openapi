@@ -23,9 +23,9 @@ paths:
         in: path
         required: true
     get:
-      summary: Your GET endpoint
+      summary: Get User information
       tags:
-        - V1
+        - users
       responses:
         '200':
           description: OK
@@ -39,10 +39,16 @@ paths:
                     minimum: 1
                   name:
                     type: string
-                    maxLength: 30
-                  age:
-                    type: integer
-                    minimum: 0
+                    maxLength: 50
+                  email:
+                    type: string
+                    maxLength: 255
                 required:
                   - id
                   - name
+        '404':
+          description: Not found
+          content: 
+            application/json:
+              schema:
+                type: object
