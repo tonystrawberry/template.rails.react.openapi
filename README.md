@@ -1,5 +1,17 @@
 # Rails 7 API / ReactJS / OpenAPI - Monolithic Web Application Template
 
+## Versions
+```
+Ruby 3.1.2
+Rails 7.0.2
+PG 13
+
+React 18.1.0
+Typescript 4.6.3
+
+OpenAPI 3.0.3
+```
+
 ## Get started
 
 ```
