@@ -1,0 +1,55 @@
+# openapi.yaml
+openapi: 3.0.3
+info:
+  title: 'Rails API / ReactJS - Template API'
+  version: '1.0'
+  description: "This is a template about Rails API / ReactJS - Template API."
+  contact:
+    name: Tony Duong
+    url: 'https://tonystrawberry.codes'
+    email: tony.duong.102@gmail.com
+  license:
+    name: MIT License
+servers:
+  - url: 'http://localhost:3000'
+    description: Local
+paths:
+  '/users/{user_id}':
+    parameters:
+      - schema:
+          type: integer
+          minimum: 1
+        name: user_id
+        in: path
+        required: true
+    get:
+      summary: Get User information
+      operationId: get-user
+      tags:
+        - users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    minimum: 1
+                  name:
+                    type: string
+                    maxLength: 50
+                  email:
+                    type: string
+                    maxLength: 255
+                required:
+                  - id
+                  - name
+        '404':
+          description: Not found
+          content: 
+            application/json:
+              schema:
+                type: object

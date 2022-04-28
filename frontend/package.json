@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.1",
-    "@types/node": "^16.11.31",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -17,10 +18,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "generate-api-client": "openapi-generator-cli generate -i api-schema/api.yaml -g typescript-axios -o types/typescript-axios"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.29",
+    "react-app-rewired": "^2.2.1"
   }
 }

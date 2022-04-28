@@ -1,8 +1,19 @@
-import React from 'react';
+import { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { usersApi } from "@/api";
 
 function App() {
+
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await usersApi.getUser(1);
+      console.log("Response from getUser", response.data)
+    };
+
+    getUser();
+  },[])
+
   return (
     <div className="App">
       <header className="App-header">
