@@ -11,7 +11,7 @@ This template also includes the following functionalities.
 ## Features
 - [x] Rails API 7 (with Docker integration)
 - [x] PostgreSQL local database & settings
-- [ ] [React Frontend (with Docker integration)](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
+- [x] [React Frontend (with Docker integration)](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
 - [ ] Support for JWT Token Authentication & Authorization
 - [ ] Support for OAuth2 Authentication
 - [x] [Client API code generation based on OpenAPI 3.0 schema definition](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
