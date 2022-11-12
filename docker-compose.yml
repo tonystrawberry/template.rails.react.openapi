@@ -5,7 +5,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
   backend:
@@ -15,7 +15,20 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - ./backend:/app
+      - bundle:/usr/local/bundle
     ports:
       - "3000:3000"
     depends_on:
       - db
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/usr/src/app
+    command: sh -c "cd app && npm install && npm run start"
+    ports:
+      - "4000:3000"
+volumes:
+  pg_data:
+  bundle:
