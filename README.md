@@ -14,8 +14,8 @@ This template also includes the following functionalities.
 - [ ] [React Frontend (with Docker integration)](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
 - [ ] Support for JWT Token Authentication & Authorization
 - [ ] Support for OAuth2 Authentication
-- [ ] [Client API code generation based on OpenAPI 3.0 schema definition](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
-- [ ] [Rails-side test implementation (unit & controller)](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/1)
+- [x] [Client API code generation based on OpenAPI 3.0 schema definition](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/2)
+- [x] [Rails-side test implementation (unit & controller)](https://github.com/tonystrawberry/rails7-react-openapi-template/pull/1)
 - [ ] SonarCloud property/settings file
 - [ ] Add annotation gem (make it optional)
 - [ ] Add parameters validation gem (make it optional)
