@@ -43,6 +43,27 @@ docker-compose run --rm backend rake db:seed # Seed DB with an initial user
 docker-compose up # Run the application
 ```
 
+## Access Rails console
+
+```
+docker-compose run --rm backend rails c
+
+$ User.all # Fetch and show all users 
+```
+
+## Tests
+
+```
+docker-compose run --rm backend /bin/bash # Run bash in the backend container
+
+$ RAILS_ENV=test rspec spec/ # Run all tests inside spec folder
+```
+
+## Install gems
+
+1. Add the gem in the `Gemfile`.
+2. Run `docker-compose run --rm backend bundle install`
+
 ## Development
 ### Frontend
 
@@ -51,5 +72,3 @@ Accessible via `http://localhost:4000`.
 ### Backend
 
 Accessible via `http://localhost:3000`.
-
-
