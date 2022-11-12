@@ -24,6 +24,8 @@ services:
     build:
       context: frontend
       dockerfile: Dockerfile
+      args:
+        REACT_APP_API_BASE_URL: http://localhost:3000/
     volumes:
       - ./frontend:/usr/src/app
     command: sh -c "cd app && npm install && npm run start"
